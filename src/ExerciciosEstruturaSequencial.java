@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosEstruturaSequencial {
     public static void main(String[] args) {
-        diferencaDeProduto();
+        calculaSalarioFuncionario();
     }
 
     public static void somaDoisNumeros(){
@@ -36,5 +36,17 @@ public class ExerciciosEstruturaSequencial {
         D = sc.nextInt();
 
         System.out.println("DIFERENÇA = "+ (A*B-C*D));
+    }
+
+    public static void calculaSalarioFuncionario() {
+        int numeroFuncionario, horasTrabalhadas;
+        double salarioHora;
+
+        Scanner sc = new Scanner(System.in);
+        numeroFuncionario = sc.nextInt();
+        horasTrabalhadas = sc.nextInt();
+        salarioHora = sc.nextDouble();
+
+        System.out.printf("NUMBER = %d\nSALARY = U$ %.2f", numeroFuncionario, horasTrabalhadas * salarioHora);
     }
 }
