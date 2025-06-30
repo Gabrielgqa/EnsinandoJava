@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosEstruturaSequencial {
     public static void main(String[] args) {
-        calculaRaio();
+        diferencaDeProduto();
     }
 
     public static void somaDoisNumeros(){
@@ -24,5 +24,17 @@ public class ExerciciosEstruturaSequencial {
         raio = sc.nextDouble();
 
         System.out.printf("A = %.4f", PI * Math.pow(raio, 2));
+    }
+
+    public static void diferencaDeProduto() {
+        // função A * B - C * D
+        int A, B, C, D;
+        Scanner sc = new Scanner(System.in);
+        A = sc.nextInt();
+        B = sc.nextInt();
+        C = sc.nextInt();
+        D = sc.nextInt();
+
+        System.out.println("DIFERENÇA = "+ (A*B-C*D));
     }
 }
