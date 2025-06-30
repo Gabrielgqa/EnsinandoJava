@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosEstruturaSequencial {
     public static void main(String[] args) {
-        calculaSalarioFuncionario();
+        calculaOrcamentoPecas();
     }
 
     public static void somaDoisNumeros(){
@@ -48,5 +48,24 @@ public class ExerciciosEstruturaSequencial {
         salarioHora = sc.nextDouble();
 
         System.out.printf("NUMBER = %d\nSALARY = U$ %.2f", numeroFuncionario, horasTrabalhadas * salarioHora);
+    }
+
+    public static void calculaOrcamentoPecas() {
+        int code1, number1, code2, number2;
+        double valorUnit1, valorUnit2, total;
+
+        Scanner sc = new Scanner(System.in);
+
+        code1 = sc.nextInt();
+        number1 = sc.nextInt();
+        valorUnit1 = sc.nextDouble();
+
+        code2 = sc.nextInt();
+        number2 = sc.nextInt();
+        valorUnit2 = sc.nextDouble();
+
+        total = number1 * valorUnit1 + number2 * valorUnit2;
+
+        System.out.printf("VALOR A PAGAR: %.2f", total);
     }
 }
