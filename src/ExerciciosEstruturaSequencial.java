@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosEstruturaSequencial {
     public static void main(String[] args) {
-        calculaOrcamentoPecas();
+        calculaOrcamentoPecasFor();
     }
 
     public static void somaDoisNumeros(){
@@ -65,6 +65,27 @@ public class ExerciciosEstruturaSequencial {
         valorUnit2 = sc.nextDouble();
 
         total = number1 * valorUnit1 + number2 * valorUnit2;
+
+        System.out.printf("VALOR A PAGAR: %.2f", total);
+    }
+
+    public static void calculaOrcamentoPecasFor(){
+        int code, number;
+        double valor, total;
+
+        total = 0;
+
+
+
+        for(int i = 0; i < 2; i++){
+            Scanner sc = new Scanner(System.in);
+
+            code = sc.nextInt();
+            number = sc.nextInt();
+            valor = sc.nextDouble();
+
+            total += number * valor;
+        }
 
         System.out.printf("VALOR A PAGAR: %.2f", total);
     }
