@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosEstruturaCondicional {
     public static void main(String[] args) {
-        parOuImpar();
+        multiploOuNao();
     }
 
     public static void negativoOuPositivo() {
@@ -28,6 +28,21 @@ public class ExerciciosEstruturaCondicional {
             System.out.println("PAR");
         } else {
             System.out.println("ÍMPAR");
+        }
+    }
+
+    public static void multiploOuNao() {
+        int A, B;
+
+        Scanner sc = new Scanner(System.in);
+
+        A = sc.nextInt();
+        B = sc.nextInt();
+
+        if (A % B == 0 || B % A == 0) {
+            System.out.println("São Multiplos");
+        } else {
+            System.out.println("Não são Multiplos");
         }
     }
 }
