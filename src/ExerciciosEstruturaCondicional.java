@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosEstruturaCondicional {
     public static void main(String[] args) {
-        precoLanche();
+        verificaIntervalo();
     }
 
     public static void negativoOuPositivo() {
@@ -97,5 +97,27 @@ public class ExerciciosEstruturaCondicional {
         }
 
         System.out.printf("Total: R$ %.2f", total);
+    }
+
+    public static void verificaIntervalo() {
+        double valor;
+
+        Scanner sc = new Scanner(System.in);
+        valor = sc.nextDouble();
+        sc.close();
+
+        if (valor >= 0 && valor <= 100){
+            if (valor <= 25 ) {
+                System.out.println("Intervalo [0, 25]");
+            } else if (valor <= 50){
+                System.out.println("Intervalo [25, 50]");
+            } else if (valor <= 75){
+                System.out.println("Intervalo [50, 75]");
+            } else {
+                System.out.println("Intervalo [75, 100]");
+            }
+        } else {
+            System.out.println("Fora de intervalo");
+        }
     }
 }
