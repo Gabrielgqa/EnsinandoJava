@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosEstruturaCondicional {
     public static void main(String[] args) {
-        multiploOuNao();
+        duracaoJogo();
     }
 
     public static void negativoOuPositivo() {
@@ -44,5 +44,24 @@ public class ExerciciosEstruturaCondicional {
         } else {
             System.out.println("Não são Multiplos");
         }
+    }
+
+    public static void duracaoJogo(){
+        int start, end, total;
+
+        Scanner sc = new Scanner(System.in);
+
+        start = sc.nextInt();
+        end = sc.nextInt();
+
+        if (start < end){
+            total = end - start;
+        } else if (start == end) {
+            total = 24;
+        } else {
+            total = 24 - start + end;
+        }
+
+        System.out.printf("O JOGO DUROU %d HORA(S)", total);
     }
 }
