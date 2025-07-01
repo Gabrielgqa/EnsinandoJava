@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosEstruturaCondicional {
     public static void main(String[] args) {
-        duracaoJogo();
+        precoLanche();
     }
 
     public static void negativoOuPositivo() {
@@ -63,5 +63,39 @@ public class ExerciciosEstruturaCondicional {
         }
 
         System.out.printf("O JOGO DUROU %d HORA(S)", total);
+    }
+
+    public static void precoLanche() {
+        int codigo, quantidade;
+        double total;
+
+        Scanner sc = new Scanner(System.in);
+        codigo = sc.nextInt();
+        quantidade = sc.nextInt();
+
+        sc.close();
+
+        switch (codigo) {
+            case 1:
+                total = quantidade * 4.0;
+                break;
+            case 2:
+                total = quantidade * 4.5;
+                break;
+            case 3:
+                total = quantidade * 5.0;
+                break;
+            case 4:
+                total = quantidade * 2.0;
+                break;
+            case 5:
+                total = quantidade * 1.5;
+                break;
+            default:
+                total = 0;
+                break;
+        }
+
+        System.out.printf("Total: R$ %.2f", total);
     }
 }
