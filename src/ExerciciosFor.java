@@ -19,4 +19,15 @@ public class ExerciciosFor {
 
         System.out.println(soma);
     }
+
+    public static void mostraImparesAteN(){
+        int X;
+
+        Scanner sc = new Scanner(System.in);
+        X = sc.nextInt();
+
+        for (int i = 1; i <= X; i+=2){
+            System.out.println(i);
+        }
+    }
 }
