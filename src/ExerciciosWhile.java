@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosWhile {
     public static void main(String[] args) {
-        senhaCorreta();
+        indicaQuadranteCoordenadas();
     }
 
     public static void somaAteZero() {
@@ -32,5 +32,29 @@ public class ExerciciosWhile {
         }
 
         System.out.println("Acesso Permitido");
+    }
+
+    public static void indicaQuadranteCoordenadas() {
+        int X, Y;
+
+        Scanner sc = new Scanner(System.in);
+        X = sc.nextInt();
+        Y = sc.nextInt();
+
+        while (X != 0 && Y != 0){
+            if(X > 0 && Y > 0){
+                System.out.println("primeiro");
+            } else if (X < 0 && Y > 0){
+                System.out.println("segundo");
+            } else if (X < 0 && Y < 0){
+                System.out.println("terceiro");
+            } else {
+                System.out.println("quarto");
+            }
+            X = sc.nextInt();
+            Y = sc.nextInt();
+        }
+
+        sc.close();
     }
 }
