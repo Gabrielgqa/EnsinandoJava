@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosFor {
     public static void main(String[] args) {
-        calculaMediaNTrios();
+        calculaDivisaoNDuplas();
     }
 
     public static void somaFor() {
@@ -63,6 +63,25 @@ public class ExerciciosFor {
             n3 = sc.nextDouble();
 
             System.out.printf("%.1f\n",(n1*2+n2*3+n3*5)/10);
+        }
+    }
+
+    public static void calculaDivisaoNDuplas(){
+        int n;
+        float n1, n2;
+
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+
+        for(int i = 0; i < n; i++){
+            n1 = sc.nextFloat();
+            n2 = sc.nextFloat();
+
+            if(n2 == 0){
+                System.out.println("divisão impossível");
+            } else {
+                System.out.printf("%.1f\n", n1/n2);
+            }
         }
     }
 }
