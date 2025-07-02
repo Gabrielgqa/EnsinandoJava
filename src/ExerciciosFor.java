@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosFor {
     public static void main(String[] args) {
-        selecionaNumerosEntreDezEVinte();
+        calculaMediaNTrios();
     }
 
     public static void somaFor() {
@@ -48,5 +48,21 @@ public class ExerciciosFor {
 
         System.out.println(somaDentro + " in");
         System.out.println(somaFora + " out");
+    }
+
+    public static void calculaMediaNTrios() {
+        int n;
+        double n1, n2, n3;
+
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+
+        for(int i = 0; i < n; i++){
+            n1 = sc.nextDouble();
+            n2 = sc.nextDouble();
+            n3 = sc.nextDouble();
+
+            System.out.printf("%.1f\n",(n1*2+n2*3+n3*5)/10);
+        }
     }
 }
