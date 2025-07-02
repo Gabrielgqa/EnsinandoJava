@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosFor {
     public static void main(String[] args) {
-        calculaDivisaoNDuplas();
+        calculaFatorial();
     }
 
     public static void somaFor() {
@@ -83,5 +83,18 @@ public class ExerciciosFor {
                 System.out.printf("%.1f\n", n1/n2);
             }
         }
+    }
+
+    public static void calculaFatorial(){
+        int n, fatorial=1;
+
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+
+        for(int i=1; i <= n; i++){
+            fatorial *= i;
+        }
+
+        System.out.println(fatorial);
     }
 }
