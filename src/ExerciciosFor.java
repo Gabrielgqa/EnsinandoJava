@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosFor {
     public static void main(String[] args) {
-        somaFor();
+        selecionaNumerosEntreDezEVinte();
     }
 
     public static void somaFor() {
@@ -29,5 +29,24 @@ public class ExerciciosFor {
         for (int i = 1; i <= X; i+=2){
             System.out.println(i);
         }
+    }
+
+    public static void selecionaNumerosEntreDezEVinte() {
+        int n,valor, somaDentro = 0, somaFora = 0;
+
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+
+        for(int i = 0; i < n; i++){
+            valor = sc.nextInt();
+            if (valor >= 10 && valor <= 20)
+                somaDentro++;
+            else
+                somaFora++;
+
+        }
+
+        System.out.println(somaDentro + " in");
+        System.out.println(somaFora + " out");
     }
 }
