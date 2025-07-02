@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosWhile {
     public static void main(String[] args) {
-        indicaQuadranteCoordenadas();
+        pesquisaPosto();
     }
 
     public static void somaAteZero() {
@@ -56,5 +56,26 @@ public class ExerciciosWhile {
         }
 
         sc.close();
+    }
+
+    public static void pesquisaPosto() {
+        int tipo, somaGasolina = 0, somaAlcool = 0, somaDiesel = 0;
+
+        Scanner sc = new Scanner(System.in);
+        tipo = sc.nextInt();
+
+        while (tipo != 4){
+            if(tipo == 1){
+                somaAlcool += 1;
+            } else if (tipo == 2){
+                somaGasolina += 1;
+            } else if (tipo == 3){
+                somaDiesel += 1;
+            }
+
+            tipo = sc.nextInt();
+        }
+
+        System.out.printf("MUITO OBRIGADO\nAlcool: %d\nGasolina: %d\nDiesel: %d", somaAlcool, somaGasolina, somaDiesel);
     }
 }
