@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosWhile {
     public static void main(String[] args) {
-        somaAteZero();
+        senhaCorreta();
     }
 
     public static void somaAteZero() {
@@ -18,5 +18,19 @@ public class ExerciciosWhile {
         }
         sc.close();
         System.out.println(soma);
+    }
+
+    public static void senhaCorreta(){
+        String senha;
+        String senhaCorreta = "2002";
+        Scanner sc = new Scanner(System.in);
+        senha = sc.next();
+
+        while (!senha.equals(senhaCorreta)){
+            System.out.println("Senha Inválida");
+            senha = sc.next();
+        }
+
+        System.out.println("Acesso Permitido");
     }
 }
