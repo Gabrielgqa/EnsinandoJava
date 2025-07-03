@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosFor {
     public static void main(String[] args) {
-        mostraDivisores();
+        mostrarQuadradoCuboDeUmAN();
     }
 
     public static void somaFor() {
@@ -109,5 +109,20 @@ public class ExerciciosFor {
                 System.out.println(i);
             }
         }
+    }
+
+    public static void mostrarQuadradoCuboDeUmAN(){
+        int n;
+
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+
+        for(int i = 1; i <= n; i++){
+            int quadrado = i * i;
+            int cubo = i * i* i;
+            System.out.printf("%d %d %d\n",i,quadrado,cubo);
+        }
+
+        sc.close();
     }
 }
