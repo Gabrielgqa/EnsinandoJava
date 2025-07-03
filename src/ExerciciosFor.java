@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosFor {
     public static void main(String[] args) {
-        calculaFatorial();
+        mostraDivisores();
     }
 
     public static void somaFor() {
@@ -96,5 +96,18 @@ public class ExerciciosFor {
         }
 
         System.out.println(fatorial);
+    }
+
+    public static void mostraDivisores() {
+        int n;
+
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+
+        for(int i = 1; i <= n; i++){
+            if(n%i == 0){
+                System.out.println(i);
+            }
+        }
     }
 }
