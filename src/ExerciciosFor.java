@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosFor {
     public static void main(String[] args) {
-        mostrarQuadradoCuboDeUmAN();
+        ePrimo();
     }
 
     public static void somaFor() {
@@ -124,5 +124,21 @@ public class ExerciciosFor {
         }
 
         sc.close();
+    }
+
+    public static void ePrimo(){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int ctdMultiplos = 0;
+        for(int i = 1; i <= n; i++){
+            if(n%i == 0){
+                ctdMultiplos++;
+            }
+        }
+        if(ctdMultiplos == 2){
+            System.out.println("O número é primo");
+        } else {
+            System.out.println("O número não é primo");
+        }
     }
 }
