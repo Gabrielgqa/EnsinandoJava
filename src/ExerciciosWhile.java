@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ExerciciosWhile {
     public static void main(String[] args) {
-        pesquisaPosto();
+        somarAteCem();
     }
 
     public static void somaAteZero() {
@@ -77,5 +77,15 @@ public class ExerciciosWhile {
         }
 
         System.out.printf("MUITO OBRIGADO\nAlcool: %d\nGasolina: %d\nDiesel: %d", somaAlcool, somaGasolina, somaDiesel);
+    }
+
+    public static void somarAteCem(){
+        int soma = 0;
+        while(soma < 100) {
+            Scanner sc = new Scanner(System.in);
+            int n = sc.nextInt();
+            soma += n;
+            System.out.println("Soma: " + soma);
+        }
     }
 }
